@@ -1,0 +1,3 @@
+---
+- name: mkdir of log directory for the td-agent
+  file: state=directory path=/var/log/td-agent/app mode=0755 owner=td-agent group=td-agent

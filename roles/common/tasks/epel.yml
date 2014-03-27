@@ -1,0 +1,5 @@
+---
+- name: setup the yum repository for the epel
+  yum: name=http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+  notify: yum update
+

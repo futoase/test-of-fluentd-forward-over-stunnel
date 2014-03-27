@@ -1,0 +1,6 @@
+---
+- name: mkdir for the stunnel
+  file: state=directory path=/etc/stunnel owner=root group=root mode=0755
+
+- name: copy stunnel.conf from template for the client
+  template: src=stunnel.conf dest=/etc/stunnel/stunnel.conf

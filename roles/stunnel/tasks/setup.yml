@@ -1,0 +1,9 @@
+---
+- name: mkdir /etc/stunnel
+  file: state=directory path=/etc/stunnel mode=0755
+
+- name: copy stunnel.pem from local to host
+  copy: src=stunnel.pem dest=/etc/stunnel/stunnel.pem mode=0644
+
+- name: mkdir of log dir for stunnel
+  file: state=directory path=/var/log/stunnel mode=0755 owner=root

@@ -1,0 +1,26 @@
+---
+- hosts: all
+  sudo: yes
+  roles:
+    - common
+    - td-agent
+
+- hosts:
+    - vagrant-server
+  sudo: yes
+  roles:
+    - td-agent-for-server
+    - stunnel-for-server
+
+- hosts:
+    - vagrant-client
+  sudo: yes
+  roles:
+    - td-agent-for-client
+    - stunnel-for-client
+
+- hosts: all
+  sudo: yes
+  roles:
+    - stunnel
+    - supervisord

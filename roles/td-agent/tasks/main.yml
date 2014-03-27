@@ -1,0 +1,5 @@
+---
+- include: repo.yml
+- include: install.yml
+- include: mkdir.yml
+- include: path.yml

@@ -1,0 +1,13 @@
+---
+- name: install the td-agent
+  yum: name=td-agent enablerepo=treasuredata state=latest
+
+- name: set state of start for the service of td-agent
+  service: name=td-agent state=started enabled=yes
+
+- name: copy td-agent.conf from local to host
+  template: src=td-agent.conf dest=/etc/td-agent/td-agent.conf
+  notify: restart of td-agent
+
+- name: set state of start for the service of td-agent
+  service: name=td-agent state=started enabled=yes

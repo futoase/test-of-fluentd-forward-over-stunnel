@@ -1,0 +1,4 @@
+---
+- name: copy td-agent.conf from template for the server
+  template: src=td-agent.conf dest=/etc/td-agent/td-agent.conf
+  notify: restart of td-agent

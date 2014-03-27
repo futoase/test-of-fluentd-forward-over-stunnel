@@ -1,0 +1,3 @@
+---
+- name: install the DevelopmentTools
+  yum: name="@Development tools" state=latest

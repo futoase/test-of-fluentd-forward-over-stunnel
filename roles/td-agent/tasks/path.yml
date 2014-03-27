@@ -1,0 +1,3 @@
+---
+- name: copy td-agent.sh from template
+  copy: src=td-agent.sh dest=/etc/profile.d/td-agent.sh
