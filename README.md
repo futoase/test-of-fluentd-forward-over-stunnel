@@ -1,6 +1,8 @@
 test-of-fluentd-forward-over-stunnel
 ------------------------------------
 
+![structure](https://cloud.githubusercontent.com/assets/72997/2545534/25e8df9e-b619-11e3-9105-078cf42d2450.jpg)
+
 Prerequired
 -----------
 
