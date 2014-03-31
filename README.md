@@ -26,6 +26,21 @@ How to setup?
 > vagrant up --provision client
 ```
 
+## testing of in_tail.
+
+### on client
+
+```
+> cd /var/dummy-log
+> node index.js -f /tmp/dummy.log -t 100
+```
+
+### on server
+
+```
+> tail -f /var/log/td-agent/app/base.log
+```
+
 You try send packet of fluentd from client to server
 ----------------------------------------------------
 
