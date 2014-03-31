@@ -1,3 +1,11 @@
 ---
 - name: install the DevelopmentTools
   yum: name="@Development tools" state=latest
+
+- name: install the softwares from ius
+  yum: name={{ item }} enablerepo=ius,epel state=latest
+  with_items:
+    - git
+    - nodejs
+    - npm
+

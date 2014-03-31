@@ -1,0 +1,6 @@
+---
+- name: git clone generator of dummy-log from github
+  git: repo=https://github.com/futoase/generate-dummy-log-using-Faker.js.git dest=/var/dummy-log
+
+- name: npm install of dummy-log
+  shell: npm install chdir=/var/dummy-log

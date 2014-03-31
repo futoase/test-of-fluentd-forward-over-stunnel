@@ -18,6 +18,7 @@
   roles:
     - td-agent-for-client
     - stunnel-for-client
+    - dummy-log
 
 - hosts: all
   sudo: yes
