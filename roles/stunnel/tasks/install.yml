@@ -1,18 +1,18 @@
 ---
 - name: download the stunnel from official site it
-  get_url: url=https://www.stunnel.org/downloads/stunnel-5.00.tar.gz dest=/tmp/stunnel.tar.gz validate_certs=no force=yes
+  get_url: url=https://www.stunnel.org/downloads/stunnel-5.01.tar.gz dest=/tmp/stunnel.tar.gz validate_certs=no force=yes
 
 - name: expand of tarball for the stunnel.tar.gz
   shell: tar -xvzf stunnel.tar.gz chdir=/tmp
 
 - name: configure at directory for the stunnel
-  shell: ./configure chdir=/tmp/stunnel-5.00
+  shell: ./configure chdir=/tmp/stunnel-5.01
 
 - name: make at directory for the stunnel
-  shell: make chdir=/tmp/stunnel-5.00
+  shell: make chdir=/tmp/stunnel-5.01
 
 - name: make install on machine of stunnel
-  shell: make install chdir=/tmp/stunnel-5.00
+  shell: make install chdir=/tmp/stunnel-5.01
 
 - name: remove of directory for the stunnel
-  shell: rm -rf /tmp/stunnel-5.00
+  shell: rm -rf /tmp/stunnel-5.01
