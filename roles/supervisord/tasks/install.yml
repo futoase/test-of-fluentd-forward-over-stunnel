@@ -1,9 +1,14 @@
 ---
 - name: install the supervisor
-  yum: name=supervisor enablerepo=epel state=latest
+  yum: name=supervisor 
+       enablerepo=epel 
+       state=latest
 
 - name: copy supervisord.conf from local to host
-  copy: src=supervisor.conf dest=/etc/supervisord.conf
+  copy: src=supervisor.conf 
+        dest=/etc/supervisord.conf
 
 - name: start the supervisor
-  service: name=supervisord state=started enabled=yes
+  service: name=supervisord 
+           state=started 
+           enabled=yes

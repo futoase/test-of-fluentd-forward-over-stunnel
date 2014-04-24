@@ -1,6 +1,9 @@
 ---
 - name: download the stunnel from official site it
-  get_url: url=https://www.stunnel.org/downloads/stunnel-5.01.tar.gz dest=/tmp/stunnel.tar.gz validate_certs=no force=yes
+  get_url: url=https://www.stunnel.org/downloads/stunnel-5.01.tar.gz 
+           dest=/tmp/stunnel.tar.gz 
+           validate_certs=no 
+           force=yes
 
 - name: expand of tarball for the stunnel.tar.gz
   shell: tar -xvzf stunnel.tar.gz chdir=/tmp
