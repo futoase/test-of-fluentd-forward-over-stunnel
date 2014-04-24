@@ -1,6 +1,11 @@
 ---
 - name: mkdir for the stunnel
-  file: state=directory path=/etc/stunnel owner=root group=root mode=0755
+  file: state=directory 
+        path=/etc/stunnel 
+        owner=root 
+        group=root 
+        mode=0755
 
 - name: copy stunnel.conf from template for the server
-  template: src=stunnel.conf dest=/etc/stunnel/stunnel.conf
+  template: src=stunnel.conf 
+            dest=/etc/stunnel/stunnel.conf
